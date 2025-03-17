@@ -1,0 +1,35 @@
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    align-items: center;
+    gap: 10px;
+    padding: 92px 50px 91px 50px;
+}
+
+.cover {
+    position: relative;
+    padding: 50px;
+    color: white;
+    background: url(../images/cover.jpg) center / cover;
+}
+
+.lots {
+    padding: 180px 50px 90px 50px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 90px 50px;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 90px 50px;
+    font-size: 18px;
+}
