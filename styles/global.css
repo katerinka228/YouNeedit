@@ -4,3 +4,10 @@ img {
 a {
     color: inherit;
 }
+
+body {
+    min-width: 1100px;
+    margin: auto;
+    font-family: Raleway, sans-serif;
+    max-width: 1440px;
+}
