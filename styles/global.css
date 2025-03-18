@@ -11,3 +11,14 @@ body {
     font-family: Raleway, sans-serif;
     max-width: 1440px;
 }
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
