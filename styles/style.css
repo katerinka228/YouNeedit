@@ -7,46 +7,68 @@
 
 .header__links-list {
     display: flex;
-    gap: 32px;
-    list-style: none;
-    white-space: nowrap; /* Слова в меню в одну строку */
+    list-style-type: circle;
+    white-space: nowrap;
+    margin: auto;
+    gap: 45px;
+    font-size: 150%;
 }
 
 .header__link {
     text-decoration: underline;
-    text-underline-offset: 3.5px;
-    font-size: 24px;
+    text-underline-offset: 4px;
+    font-size: 23px;
 }
 
 .header__link_active {
     text-decoration: none;
+    margin-right: auto;
+
 }
 
+.header__links-list-item:first-child {
+    list-style-type: none;
+    padding-left: 0;
+}
 .header__logo {
+    transform: translate(-50px, 5px);
     justify-self: center;
 }
 
 .header__logo-image {
-    width: 180px; /* Уменьшен размер логотипа */
+    width: 180px;
     height: auto;
 }
-
+.address {
+    line-height: 1.1;
+    font-style: normal;
+    text-align: left;
+    font-size: 24px;
+}
 .header__address {
     justify-self: end;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1.2; /* Стилизация адреса как в header */
+    margin-left: 90px;
+}
 
-    /*justify-self: end;*/
-    /*font-style: normal;*/
-    /*font-size: 18px; !* Размер шрифта *!*/
-    /*line-height: 1.5; !* Межстрочный интервал *!*/
-    /*text-align: right; !* Выравнивание текста по правому краю *!*/
+
+.address p {
+    margin: 0 0 5px 0;
+}
+
+.address a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    padding-bottom: 2px;
+}
+
+.header__address p:last-child {
+    white-space: normal;
+    margin-top: 10px;
 }
 
 .cover {
     position: relative;
-    padding: 200px 50px 100px;
+    padding: 200px 50px 70px;
     background: url(../images/cover.jpg) center / cover;
     color: white;
 }
@@ -54,49 +76,68 @@
 .cover__title {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     font-size: 120px;
-    line-height: 130px;
     text-transform: uppercase;
+    gap: 50px;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
 }
 
 .aligned-text {
     display: block;
+    letter-spacing: 50px;
+    position: relative;
 }
 
 .aligned-text_center {
     text-align: center;
+    left: 17px;
 }
 
 .aligned-text_right {
     text-align: right;
+    left: 28px;
+    margin-top: 10px;
 }
 
 .letter-spacing-extended {
-    letter-spacing: 40px;
+    letter-spacing: 45px;
+    padding-left: 20px;
 }
 
 .cover__description {
     display: flex;
-    justify-content: flex-start; /* Надпись левее */
+    justify-content: flex-start;
     align-items: center;
-    gap: 78px;
+    /*gap: 15px;*/
     margin-top: 150px;
+
 }
 
 .cover__description-text {
     font-size: 28px;
     line-height: 34px;
     text-transform: uppercase;
+    margin-left: 15px;
+    word-spacing: 28px;
+    z-index: 1;
+
+
 }
 
 .bet-button {
+    margin-left: 130px;
+
     border: 1px solid white;
-    padding: 16px 40px;
+    padding: 16px 45px;
     font-size: 28px;
     color: white;
     background: transparent;
     text-transform: uppercase;
+    z-index: 1;
+
 }
 
 .overlay {
@@ -106,14 +147,16 @@
 }
 
 .lots {
-    /*padding: 250px 50px;*/
-    padding: 300px 50px 50px;
+    padding: 220px 50px 50px;
 }
 
 .lots__title {
-    font-size: 48px;
+    margin-top: 15px;
+    font-size: 50px;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    padding-left: 35px;
+    letter-spacing: 1px;
 }
 
 .lots__card-list {
@@ -121,30 +164,37 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     list-style: none;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .card {
     position: relative;
-    min-height: 650px; /* Увеличен размер карточек */
+    min-height: 660px;
     padding: 60px 50px;
     color: white;
     background-size: cover;
     background-position: center;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-content: space-between;
 }
 
 .card__title {
     font-size: 28px;
     line-height: 32px;
+    padding-top: 5px;
     text-decoration: underline;
     text-underline-offset: 3.5px;
     text-transform: uppercase;
+    z-index: 1;
+
 }
 
 .card__text {
-    font-size: 24px;
-    line-height: 28px;
-    margin-top: auto;
+    font-size: 27px;
+    line-height: 30px;
+    margin-top: 50px;
+    z-index: 1;
 }
 
 .card_type_film {
@@ -160,27 +210,30 @@
 }
 
 .lots__look-more-link {
-    font-size: 24px;
+    font-size: 26px;
     text-decoration: underline;
     text-underline-offset: 3.5px;
+    margin-left: 32px;
+
 }
 
 .about {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    /*padding: 250px 50px;*/
-    padding: 150px 100px;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    letter-spacing: 1.3px;
+    padding: 155px 100px;
 }
 
 .about__logo {
-    width: 300px;
-    height: 300px;
+    width: 315px;
+    height: 315px;
     border-radius: 50%;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: -10px;
 }
 
 .about__logo-image {
@@ -193,30 +246,40 @@
     text-transform: uppercase;
     margin-bottom: 120px;
     padding: 130px 0px;
-    margin-left: -25px;
+    margin-left: 75px;
 }
 
 .about__text {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 33px;
+    margin-top: -117px;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 31px;
+    margin-left: 75px;
+    margin-right: 0;
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
+    word-spacing: -2px;
 }
 
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 250px 50px 120px;
+    padding-bottom: 200px;
 }
 
 .footer__menu {
     justify-self: center;
+    transform: translateY(-130px);
 }
 
 .footer__menu-list {
     list-style: none;
     text-align: center;
+    margin-bottom: -40px;
+    /*margin-bottom: 150px;*/
 }
 
 .footer__menu-link {
@@ -231,9 +294,14 @@
 
 .footer__social-list {
     display: flex;
-    gap: 48px;
+    gap: 65px;
     list-style: none;
     justify-self: end;
+    padding-right: 57px;
+    position: relative;
+    top: -10px;
+    transform: translateY(-160px);
+
 }
 
 .footer__social-icon {
@@ -244,5 +312,9 @@
 .footer__address {
     font-style: normal;
     font-size: 24px;
-    line-height: 1.2; /* Стилизация адреса как в header */
+    line-height: 1.2;
+    justify-self: start;
+    margin-left: 65px;
+    margin-top: 80px;
 }
+
